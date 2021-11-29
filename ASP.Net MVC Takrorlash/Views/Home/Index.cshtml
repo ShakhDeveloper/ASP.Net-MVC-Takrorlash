@@ -1,0 +1,29 @@
+﻿@using ASP.Net_MVC_Takrorlash.Models
+@model List<Book>
+<style>
+    table th,td{
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Writed Time</th>
+        <th>Price</th>
+    </tr>
+    @foreach(Book book in Model)
+            {
+                <tr>
+                    <td>@book.Id</td>
+                    <td>@book.Name</td>
+                    <td>@book.Author</td>
+                    <td>@book.WTime</td>
+                    <td>$@book.Price</td>
+                </tr>
+            }
+</table>
